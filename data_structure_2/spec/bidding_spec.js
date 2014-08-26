@@ -4,12 +4,12 @@ describe("Bidding", function() {
 
     beforeEach(function() {
         init_activity_database();
-        var two_activities = [{
+        var two_activities = {"0":{
             name: "first activity",
             sign_ups: [],
             bids: [],
             biddings:{}
-        }, {
+        }, "1":{
             name: "second activity",
             sign_ups: [
                 {
@@ -29,7 +29,7 @@ describe("Bidding", function() {
             biddings: {
                 "竞价1": []
                 }
-        }];
+        }};
         localStorage.activities = JSON.stringify(two_activities);
         localStorage.current_activity_id = "1";
         localStorage.current_bid = "竞价1";
@@ -38,7 +38,7 @@ describe("Bidding", function() {
 
     afterEach(function(){
         localStorage.clear();
-    })
+    });
 
     it("should bid successfully when it is bidding and user has signed up", function(){
         var phone_no = "13600000000";

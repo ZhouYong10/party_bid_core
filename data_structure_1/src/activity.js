@@ -14,7 +14,7 @@ function findIndexByName(objArray,name){
 }
 
 Activity.getActivities = function(){
-    return JSON.parse(localStorage.activities) || [];
+    return JSON.parse(localStorage.getItem("activities")) || [];
 };
 
 Activity.saveActivity = function(activity){
