@@ -4,7 +4,6 @@ function notify_sms_received(sms_json){
     var message;
     var flag;
     var messages = sms_json.messages;
-
     for(var x = 0; x < messages.length; x++){
         userPhone = messages[x].phone;
         message = messages[x].message.replace(/\s+/g,"");

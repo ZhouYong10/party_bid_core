@@ -14,7 +14,6 @@ describe("Bids and Bidding Render", function() {
                     {
                         phone:"13600000000",
                         price: "9"
-
                     },
                     {
                         phone:"15600000000",
@@ -66,7 +65,7 @@ describe("Bids and Bidding Render", function() {
 
     afterEach(function(){
         localStorage.clear();
-    })
+    });
 
     it("should show all bids", function(){
         var bids = render_bids("1");

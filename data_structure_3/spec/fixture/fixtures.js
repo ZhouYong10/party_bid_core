@@ -1,14 +1,24 @@
 function init_activity_database(){
     localStorage.activity_id_generator = "0";
     localStorage.current_activity = "";
-    localStorage.actity_ids = [];
-    localStorage.activities = {};
+    localStorage.actity_ids = "[]";
+    localStorage.activities = "[]";
 
-    localStorage.sign_ups = [];
-    localStorage.bids = [];
-    localStorage.biddings = [];
+    localStorage.sign_ups = "[]";
+    localStorage.bids = "[]";
+    localStorage.biddings = "[]";
 }
 
+function init_bids(){
+    var bids = [
+        {
+            activity_id:"1",
+            name:"竞价1",
+            biddings:[]
+        }
+    ];
+    localStorage.bids = JSON.stringify(bids);
+}
 
 function init_two_activity(){
     var activities = [
@@ -56,6 +66,6 @@ function init_sign_ups(){
             phone:"13800000000",
             activity_id:"1"
         }
-    ]
+    ];
     localStorage.sign_ups = JSON.stringify(sign_ups);
 }
